@@ -1,0 +1,166 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --gradient-color: linear-gradient(95deg,
+                  hsl(49, 97%, 57%) -7%,
+                  hsla(64, 74%, 60%, 0.815) 112%);
+  --first-color-light: hsl(256, 64%, 88%);
+  --first-color-lighten: hsl(256, 58%, 94%);
+  --white-color: hsl(0, 0%, 100%);
+  --body-color: hsl(256, 100%, 98%);
+
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: "Montserrat", sans-serif;
+  --h1-font-size: 1.5rem;
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #162834!important;
+    height: 100vh;
+    flex-direction: column;
+    
+}
+.btn-primary{
+    background: #f0a418!important;
+    border: none!important;
+}
+
+form {
+    display: grid;
+    grid-gap: 2rem;
+  }
+  
+ .border-warning input {
+    background: white;
+    color: rgb(7 2 18);
+    transition: all 200ms ease;
+    height: 5rem;
+    padding: 0 calc(5.8rem * 0.5);
+    border-radius: calc(2rem * 0.3);
+    box-shadow: 5px 10px #f0a418;
+  }
+  .input:focus-visible{
+outline: unset!important;
+}
+
+.border-warning {
+  border-radius: 7px; 
+    background:
+      linear-gradient(to right, #f0a418 4px, transparent 4px) 0 0,
+      linear-gradient(to bottom, #f0a418 4px, transparent 4px) 0 0;
+    background-repeat: no-repeat;
+    background-size: 70px 70px;
+  }
+  .col-lg-8 {
+    width: 500px!important;
+    font-size: 24px;
+    font-weight: 700;
+  }
+  .btn{
+    font-size: 24px!important;
+    font-weight: 700!important;
+  }
+  .text{
+    font-size: 18px!important;
+    font-weight: 600!important;
+  }
+
+  
+
+/*=============== RANGE SLIDER ===============*/
+
+
+.range {
+  /* height: 64px; */
+  width: 100%;
+  max-width: 332px;
+  border-radius: 4rem;
+  box-shadow: 0 6px 16px hsla(256, 72%, 24%, .15);
+  padding-inline: 2.5rem;
+  display: grid;
+}
+
+.range__content {
+  position: relative;
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.range__slider {
+  width: 100%;
+  height: 16px;
+  background-color: var(--first-color-lighten);
+  border-radius: 4rem;
+  box-shadow: 0 4px 12px hsla(256, 72%, 24%, .2);
+  overflow: hidden;
+}
+
+.range__slider-line {
+  width: 100%;
+  height: 100%;
+  background: var(--gradient-color);
+  width: 0;
+}
+
+.range__thumb {
+  width: 32px;
+  height: 32px;
+  background-color: var(--first-color-lighten);
+  border-radius: 50%;
+  box-shadow: 0 0 12px hsla(256, 72%, 24%, .2);
+  position: absolute;
+}
+
+/* Value input range */
+.range__value {
+  width: 64px;
+  height: 64px;
+  background: var(--gradient-color);
+  position: absolute;
+  top: -82px;
+  left: -16px;
+  border-radius: 2rem 2rem 2rem .25rem;
+  transform: rotate(-45deg);
+  display: grid;
+  place-items: center;
+}
+
+.range__value-number {
+  transform: rotate(45deg);
+  color: var(--white-color);
+  font-size: var(--h1-font-size);
+}
+
+/* Default input range */
+.range__input {
+  appearance: none;
+  width: 100%;
+  height: 16px;
+  position: absolute;
+  opacity: 0;
+}
+
+.range__input::-webkit-slider-thumb {
+  appearance: none;
+  width: 32px;
+  height: 32px;
+}
+
+.range__input::-webkit-slider-thumb:hover {
+  cursor: pointer;
+}
