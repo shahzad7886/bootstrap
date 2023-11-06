@@ -1,15 +1,14 @@
 import Layout from "@/components/Layout";
 import { useSession } from "next-auth/react";
 // import Head from 'next/head';
-import Table from "../components/Table.js";
 export default function Home() {
   const { data: session } = useSession();
   console.log({ session });
   return (
     <Layout>
-      {/* <div class="mx-auto max-w-7xl flex justify-between px-4 py-6 sm:px-6 lg:px-8">
-      <h1 class="text-3xl font-bold tracking-tight text-gray-900">Dashboard</h1>
-      <img  class="inline-block  rounded-full " src={session?.user?.image} alt="logo"/>
+      {/* <div className="mx-auto max-w-7xl flex justify-between px-4 py-6 sm:px-6 lg:px-8">
+      <h1 className="text-3xl font-bold tracking-tight text-gray-900">Dashboard</h1>
+      <img  className="inline-block  rounded-full " src={session?.user?.image} alt="logo"/>
 
             </div>
              */}
@@ -23,24 +22,24 @@ export default function Home() {
         </div>
       </div>
 
-      <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-        <h1 class="text-3xl font-bold tracking-tight text-gray-900">
+      <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
+        <h1 className="text-3xl font-bold tracking-tight text-gray-900">
           Dashboard
         </h1>
       </div>
 
-      <div class="flex flex-wrap -m-4">
-        <div class="p-4 md:w-1/4">
-          <div class="flex rounded-lg h-full bg-gray-100 p-8 flex-col">
-            <div class="flex items-center mb-3">
-              <div class="w-10 h-10 mr-3 inline-flex items-center justify-center rounded-full bg-indigo-500 text-white flex-shrink-0">
+      <div className="flex flex-wrap -m-4">
+        <div className="p-4 md:w-1/4">
+          <div className="flex rounded-lg h-full bg-gray-100 p-8 flex-col">
+            <div className="flex items-center mb-3">
+              <div className="w-10 h-10 mr-3 inline-flex items-center justify-center rounded-full bg-indigo-500 text-white flex-shrink-0">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
-                  stroke-width="1.5"
+                  strokeWidth="1.5"
                   stroke="currentColor"
-                  class="w-8 h-8"
+                  className="w-8 h-8"
                 >
                   <path
                     stroke-linecap="round"
@@ -54,28 +53,28 @@ export default function Home() {
                   />
                 </svg>
               </div>
-              <h2 class="text-blue-900 text-lg title-font font-medium">
+              <h2 className="text-blue-900 text-lg title-font font-medium">
                 $3.456K
               </h2>
             </div>
-            <div class="flex-grow">
-              <p class=" text-blue-500 title-font font-bold text-base">
+            <div className="flex-grow">
+              <p className=" text-blue-500 title-font font-bold text-base">
                 Total views
               </p>
             </div>
           </div>
         </div>
-        <div class="p-4 md:w-1/4">
-          <div class="flex rounded-lg h-full bg-gray-100 p-8 flex-col">
-            <div class="flex items-center mb-3">
-              <div class="w-10 h-10 mr-3 inline-flex items-center justify-center rounded-full bg-indigo-500 text-white flex-shrink-0">
+        <div className="p-4 md:w-1/4">
+          <div className="flex rounded-lg h-full bg-gray-100 p-8 flex-col">
+            <div className="flex items-center mb-3">
+              <div className="w-10 h-10 mr-3 inline-flex items-center justify-center rounded-full bg-indigo-500 text-white flex-shrink-0">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
-                  stroke-width="1.5"
+                  strokeWidth="1.5"
                   stroke="currentColor"
-                  class="w-8 h-8"
+                  className="w-8 h-8"
                 >
                   <path
                     stroke-linecap="round"
@@ -84,28 +83,28 @@ export default function Home() {
                   />
                 </svg>
               </div>
-              <h2 class="text-blue-900 text-lg title-font font-medium">
+              <h2 className="text-blue-900 text-lg title-font font-medium">
                 $45,2K
               </h2>
             </div>
-            <div class="flex-grow">
-              <p class=" text-blue-500 title-font font-bold text-base">
+            <div className="flex-grow">
+              <p className=" text-blue-500 title-font font-bold text-base">
                 Total Profit
               </p>
             </div>
           </div>
         </div>
-        <div class="p-4 md:w-1/4">
-          <div class="flex rounded-lg h-full bg-gray-100 p-8 flex-col">
-            <div class="flex items-center mb-3">
-              <div class="w-10 h-10  mr-3 inline-flex items-center justify-center rounded-full bg-indigo-500 text-white flex-shrink-0">
+        <div className="p-4 md:w-1/4">
+          <div className="flex rounded-lg h-full bg-gray-100 p-8 flex-col">
+            <div className="flex items-center mb-3">
+              <div className="w-10 h-10  mr-3 inline-flex items-center justify-center rounded-full bg-indigo-500 text-white flex-shrink-0">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
-                  stroke-width="1.5"
+                  strokeWidth="1.5"
                   stroke="currentColor"
-                  class="w-8 h-8"
+                  className="w-8 h-8"
                 >
                   <path
                     stroke-linecap="round"
@@ -114,19 +113,19 @@ export default function Home() {
                   />
                 </svg>
               </div>
-              <h2 class="text-blue-900 text-lg title-font font-medium">
+              <h2 className="text-blue-900 text-lg title-font font-medium">
                 2.450
               </h2>
             </div>
-            <div class="flex-grow">
-              <p class=" text-blue-500 title-font font-bold text-base">
+            <div className="flex-grow">
+              <p className=" text-blue-500 title-font font-bold text-base">
                 Total Products
               </p>
             </div>
-            <div class="flex items-center px-2.5 py-0.5 text-base font-semibold text-green-500 dark:text-green-500 text-center">
+            <div className="flex items-center px-2.5 py-0.5 text-base font-semibold text-green-500 dark:text-green-500 text-center">
               23%
               <svg
-                class="w-3 h-3 ml-1"
+                className="w-3 h-3 ml-1"
                 aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -136,24 +135,24 @@ export default function Home() {
                   stroke="currentColor"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeWidth="2"
                   d="M5 13V1m0 0L1 5m4-4 4 4"
                 />
               </svg>
             </div>
           </div>
         </div>
-        <div class="p-4 md:w-1/4">
-          <div class="flex rounded-lg h-full bg-gray-100 p-8 flex-col">
-            <div class="flex items-center mb-3">
-              <div class="w-10 h-10 mr-3 inline-flex items-center justify-center rounded-full bg-indigo-500 text-white flex-shrink-0">
+        <div className="p-4 md:w-1/4">
+          <div className="flex rounded-lg h-full bg-gray-100 p-8 flex-col">
+            <div className="flex items-center mb-3">
+              <div className="w-10 h-10 mr-3 inline-flex items-center justify-center rounded-full bg-indigo-500 text-white flex-shrink-0">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
-                  stroke-width="1.5"
+                  strokeWidth="1.5"
                   stroke="currentColor"
-                  class="w-8 h-8"
+                  className="w-8 h-8"
                 >
                   <path
                     stroke-linecap="round"
@@ -162,12 +161,12 @@ export default function Home() {
                   />
                 </svg>
               </div>
-              <h2 class="text-blue-900 text-lg title-font font-medium">
+              <h2 className="text-blue-900 text-lg title-font font-medium">
                 3.456
               </h2>
             </div>
-            <div class="flex-grow">
-              <p class=" text-blue-500 title-font font-bold text-base">
+            <div className="flex-grow">
+              <p className=" text-blue-500 title-font font-bold text-base">
                 Total Users
               </p>
             </div>
@@ -175,11 +174,11 @@ export default function Home() {
         </div>
       </div>
 
-      <div class="col-8 xl:col-span-7 mt-10">
-        <div class="col-8 rounded-sm border border-stroke bg-white px-5 pt-7.5 pb-5 ">
+      <div className="col-8 xl:col-span-7 mt-10">
+        <div className="col-8 rounded-sm border border-stroke bg-white px-5 pt-7.5 pb-5 ">
           <div>
 
-<Table class="table"/>
+{/* <Table className="table"/> */}
             
           </div>
         </div>

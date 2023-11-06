@@ -3,13 +3,15 @@
 // import {getServerSession} from "next-auth";
 // import {authOptions, isAdminRequest} from "@/pages/api/auth/[...nextauth]";
 
+
+
 // export default async function handle(req, res) {
 //   const {method} = req;
 //   await mongooseConnect();
 //   await isAdminRequest(req,res);
 
 //   if (method === 'GET') {
-//     // res.json(await Category.find().populate('parent'));
+//      res.json(await Category.find().populate('parent'));
 //   }
 
 //   if (method === 'POST') {
@@ -38,3 +40,24 @@
 //     res.json('ok');
 //   }
 // }
+
+
+import { mongooseConnect } from "@/lib/mongoose";
+import { Category } from "@/models/Category";
+
+export default async function handle(req, res) {
+      const {method} = req;
+      await mongooseConnect();
+
+if(method === 'GET') {
+  res.json(await Category.find());
+}
+
+
+      if (method === 'POST') {
+        const {name} = req.body;
+    const categoryDoc =  await  Category.create({name})
+   
+res.json(categoryDoc);
+}
+}
