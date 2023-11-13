@@ -8,6 +8,7 @@
         "Fortcohi",
         "NEXTAUTH",
         "setgo",
-        "sortablejs"
+        "sortablejs",
+        "Swal"
     ]
 }
