@@ -11,6 +11,7 @@ export default function ProductForm({
   description:existingDescription,
   price:existingPrice,
   images:existingImages,
+<<<<<<< HEAD
   category:assignedCategory,
   properties:assignedProperties,
 }) {
@@ -18,18 +19,35 @@ export default function ProductForm({
   const [description,setDescription] = useState(existingDescription || '');
   const [category,setCategory] = useState(assignedCategory || '');
   const [productProperties,setProductProperties] = useState(assignedProperties || {});
+=======
+  // category:assignedCategory,
+  // properties:assignedProperties,
+}) {
+  const [title,setTitle] = useState(existingTitle || '');
+  const [description,setDescription] = useState(existingDescription || '');
+  // const [category,setCategory] = useState(assignedCategory || '');
+  // const [productProperties,setProductProperties] = useState(assignedProperties || {});
+>>>>>>> parent of 22b9b97 (push)
   const [price,setPrice] = useState(existingPrice || '');
   const [images,setImages] = useState(existingImages || []);
   const [goToProducts,setGoToProducts] = useState(false);
   const [isUploading,setIsUploading] = useState(false);
   const [categories,setCategories] = useState([]);
   const router = useRouter();
+<<<<<<< HEAD
   useEffect(() => {
     axios.get('/api/categories').then(result => {
       setCategories(result.data);
 
     })
   }, []);
+=======
+  // useEffect(() => {
+  //   axios.get('/api/categories').then(result => {
+  //     setCategories(result.data);
+  //   })
+  // }, []);
+>>>>>>> parent of 22b9b97 (push)
   async function saveProduct(ev) {
     ev.preventDefault();
     const data = {
@@ -93,17 +111,25 @@ export default function ProductForm({
           placeholder="product name"
           value={title}
           onChange={ev => setTitle(ev.target.value)}/>
+<<<<<<< HEAD
         <label>Category</label>
         <select value={category}
                 onChange={ev => setCategory(ev.target.value)}>
           <option value="">Uncategorized</option>
           {categories.length > 0 && categories.map(c => 
           (
+=======
+        {/* <label>Category</label>
+        <select value={category}
+                onChange={ev => setCategory(ev.target.value)}>
+          <option value="">Uncategorized</option>
+          {categories.length > 0 && categories.map(c => (
+>>>>>>> parent of 22b9b97 (push)
             <option key={c._id} value={c._id}>{c.name}</option>
           )
           )}
         </select>
-        {/* {propertiesToFill.length > 0 && propertiesToFill.map(p => (
+        {propertiesToFill.length > 0 && propertiesToFill.map(p => (
           <div key={p.name} className="">
             <label>{p.name[0].toUpperCase()+p.name.substring(1)}</label>
             <div>

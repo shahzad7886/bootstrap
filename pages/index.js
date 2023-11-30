@@ -3,7 +3,7 @@ import { useSession } from "next-auth/react";
 // import Head from 'next/head';
 export default function Home() {
   const { data: session } = useSession();
-  // console.log({ session });
+  console.log({ session });
   return (
     <Layout>
       {/* <div className="mx-auto max-w-7xl flex justify-between px-4 py-6 sm:px-6 lg:px-8">
@@ -178,6 +178,7 @@ export default function Home() {
         <div className="col-8 rounded-sm border border-stroke bg-white px-5 pt-7.5 pb-5 ">
           <div>
 
+{/* <Table className="table"/> */}
             
           </div>
         </div>

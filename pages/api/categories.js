@@ -10,6 +10,7 @@ export default async function handle(req, res) {
   await mongooseConnect();
   // await isAdminRequest(req,res);
 
+<<<<<<< HEAD
   if (method === 'GET') {
      res.json(await Category.find().populate('parent'));
   }
@@ -77,3 +78,17 @@ export default async function handle(req, res) {
 //        res.json('ok');
 //      }
 // }
+=======
+if(method === 'GET') {
+  res.json(await Category.find());
+}
+
+
+      if (method === 'POST') {
+        const {name} = req.body;
+    const categoryDoc =  await  Category.create({name})
+   
+res.json(categoryDoc);
+}
+}
+>>>>>>> parent of 22b9b97 (push)

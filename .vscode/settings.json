@@ -16,6 +16,7 @@
         "NEXTAUTH",
         "opqe",
         "setgo",
+<<<<<<< HEAD
         "sortablejs",
         "Swal",
         "sweetalert",
@@ -25,5 +26,8 @@
         "Uncategorized",
         "YJQGZG",
         "zygol"
+=======
+        "sortablejs"
+>>>>>>> parent of 22b9b97 (push)
     ]
 }
