@@ -24,10 +24,10 @@ function Categories({swal}) {
     const data = {
       name,
       parentCategory,
-      // properties:properties.map(p => ({
-      //   name:p.name,
-      //   values:p.values.split(','),
-      // })),
+      properties:properties.map(p => ({
+        name:p.name,
+        values:p.values.split(','),
+      })),
     };
     if (editedCategory) {
       data._id = editedCategory._id;
@@ -45,12 +45,12 @@ function Categories({swal}) {
     setEditedCategory(category);
     setName(category.name);
     setParentCategory(category.parent?._id);
-    // setProperties(
-    //   category.properties.map(({name,values}) => ({
-    //   name,
-    //   values:values.join(',')
-    // }))
-    // );
+    setProperties(
+      category.properties.map(({name,values}) => ({
+      name,
+      values:values.join(',')
+    }))
+    );
   }
   function deleteCategory(category){
     swal.fire({
@@ -118,7 +118,7 @@ function Categories({swal}) {
             ))}
           </select>
         </div>
-        {/* <div className="mb-2">
+        <div className="mb-2">
           <label className="block">Properties</label>
           <button
             onClick={addProperty}
@@ -128,11 +128,12 @@ function Categories({swal}) {
           </button>
           {properties.length > 0 && properties.map((property,index) => (
             <div key={property.name} className="flex gap-1 mb-2">
-              <input type="text"
-                     value={property.name}
-                     className="mb-0"
-                     onChange={ev => handlePropertyNameChange(index,property,ev.target.value)}
-                     placeholder="property name (example: color)"/>
+               <input
+            type="text"
+            placeholder="property name (example: color)"
+            onChange={ev => handlePropertyNameChange(index,property,ev.target.value)}
+            value={property.name}/>
+             
               <input type="text"
                      className="mb-0"
                      onChange={ev =>
@@ -150,7 +151,7 @@ function Categories({swal}) {
               </button>
             </div>
           ))}
-        </div> */}
+        </div>
         <div className="flex gap-1">
           {editedCategory && (
             <button
