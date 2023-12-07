@@ -55,5 +55,8 @@ export default async function handle(req, res) {
 }
 
 export const config = {
+  experiments: {
+    topLevelAwait: true
+  },
   api: { bodyParser: false },
 };

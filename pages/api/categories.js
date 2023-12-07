@@ -1,7 +1,7 @@
 import {Category} from "@/models/Category";
 import {mongooseConnect} from "@/lib/mongoose";
-import {getServerSession} from "next-auth";
-import {authOptions, isAdminRequest} from "@/pages/api/auth/[...nextauth]";
+// import {getServerSession} from "next-auth";
+// import {authOptions, isAdminRequest} from "@/pages/api/auth/[...nextauth]";
 
 
 
@@ -10,7 +10,6 @@ export default async function handle(req, res) {
   await mongooseConnect();
   // await isAdminRequest(req,res);
 
-<<<<<<< HEAD
   if (method === 'GET') {
      res.json(await Category.find().populate('parent'));
   }
@@ -41,44 +40,6 @@ export default async function handle(req, res) {
     res.json('ok');
   }
 }
-
-
-// import { mongooseConnect } from "@/lib/mongoose";
-// import { Category } from "@/models/Category";
-
-// export default async function handle(req, res) {
-//       const {method} = req;
-//       await mongooseConnect();
-
-// if(method === 'GET') {
-//   res.json(await Category.find().populate('parent'));
-// }
-
-// if (method === 'PUT') {
-//       const {name,parentCategory,properties,_id} = req.body;
-//       const categoryDoc = await Category.updateOne({_id},{
-//         name,
-//         parent: parentCategory || undefined,
-//         properties,
-//       });
-//       res.json(categoryDoc);
-//     }
-//       if (method === 'POST') {
-//         const {name,parentCategory} = req.body;
-//     const categoryDoc =  await  Category.create({name,
-//       parent:parentCategory});
-      
-   
-// res.json(categoryDoc);
-// }
-
-// if (method === 'DELETE') {
-//        const {_id} = req.query;
-//        await Category.deleteOne({_id});
-//        res.json('ok');
-//      }
-// }
-=======
 if(method === 'GET') {
   res.json(await Category.find());
 }
@@ -90,5 +51,9 @@ if(method === 'GET') {
    
 res.json(categoryDoc);
 }
-}
->>>>>>> parent of 22b9b97 (push)
+
+export const config = {
+ 
+  api: { bodyParser: false },
+ 
+};

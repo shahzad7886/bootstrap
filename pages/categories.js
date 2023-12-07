@@ -231,7 +231,6 @@ const [category,setCategories] = useState([])
 
   async function saveCategory(ev){
     ev.preventDefault();
-<<<<<<< HEAD
     const data = {
       name,
       parentCategory,
@@ -380,25 +379,6 @@ const [category,setCategories] = useState([])
             Save
           </button>
         </div>
-=======
-    await axios.post('/api/categories',{name});
-    setName('');
-       };
-
-  return(
-    <Layout>
-      <h1>categories</h1>
-      <label >Category Name</label>
-      <form onSubmit={saveCategory} className="flex gap-1 mt-2">
-      <input 
-      type="text"
-       className="mb-0"
-        placeholder={'category name'}
-        onChange={ev=> setName(ev.target.value)}
-        value={name}
-        />
-      <button type="submit" className="py-1 btn-primary">save</button>
->>>>>>> parent of 22b9b97 (push)
       </form>
 
 {/* <table className="basic mt-3">
@@ -444,3 +424,10 @@ const [category,setCategories] = useState([])
   )
 
 }
+
+export const config = {
+  experiments: {
+    topLevelAwait: true
+  },
+  api: { bodyParser: false },
+};
